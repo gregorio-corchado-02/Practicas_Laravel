@@ -20,7 +20,15 @@ class diarioController extends Controller
     }
 
     public function metodoGuardar(Request $req){
-        return 'Se esta procesando tu solicitud...';
+        echo '<p>';
+            echo return $req->path();
+            echo '-';
+            echo return $req->method();
+            echo '-';
+            echo return $req->ip();
+            echo '-';
+            echo return $req->url();
+        echo '</p>';
     }
 
     //

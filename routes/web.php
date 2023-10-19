@@ -8,7 +8,7 @@ Route::get('/', [diarioController::class,'metodoInicio'])->name('apodoInicio');
 Route::get('/formulario', [diarioController::class,'metodoFormulario'])->name('apodoFormulario');
 Route::get('/recuerdos', [diarioController::class,'metodoRecuerdos'])->name('apodoRecuerdos');
 
-Route::post('/guardarRecuerdo', [diarioController::class,''])->name('guardarFormulario');
+Route::post('/guardarRecuerdo', [diarioController::class,'metodoGuardar'])->name('guardarFormulario');
 
 
 /*
