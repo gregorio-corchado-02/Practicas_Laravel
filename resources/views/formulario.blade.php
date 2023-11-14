@@ -1,13 +1,13 @@
 @extends('layouts.plantilla')
  
-@section('title', 'Vista 2')
+@section('title', 'DIARIO-FORMULARIO')
 
 
 @section('contenido')
 
   <h1 class="display-1 text-dark text-center mt-4">Formulario</h1>
 
-  <div class='container mt-4'>
+  <div class='container mt-4 px-5'>
 
     @if(session()->has('confirmacion'))
 
@@ -31,12 +31,12 @@
 
     @endif
 
-    <div class="card">
+    <div class="card ">
       <div class="card-header text-primary text-center fs-4">
         Introduce tus recuerdos aqui ...
       </div>
       <div class="card-body text-center">
-        <form method="POST" action="/guardarRecuerdo">
+        <form method="POST" action="/recuerdo">
           @csrf
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Titulo</label>
@@ -50,8 +50,8 @@
           </div> 
       </div>
       <div class="card-footer text-body-secondary">
-        <div class="d-grid gap-2 col-6 mx-auto">
-            <button class="btn btn-success" type="submit">Guardar</button>
+        <div class="d-grid mx-auto">
+            <button class="btn btn-outline-success" type="submit">Guardar</button>
         </div>
         </form>  
       </div>

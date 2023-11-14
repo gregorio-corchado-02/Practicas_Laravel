@@ -9,7 +9,7 @@
 <body>
     <nav class="navbar navbar-expand-lg bg-success ">
         <div class="container-fluid">
-            <a class="navbar-brand" href="https://static.vecteezy.com/system/resources/previews/013/649/594/non_2x/owl-education-illustration-on-a-background-premium-quality-symbols-icons-for-concept-and-graphic-design-vector.jpg">
+            <a class="navbar-brand" href="https://static.vecteezy.com/system/resources/previews/013/649/594/non_2x/owl-education-illustration-on-a-background-premium-quality-symbols-icons-for-concept-and-graphic-design-vector.jpg" target='_blank'>
                 <img src="https://static.vecteezy.com/system/resources/previews/013/649/594/non_2x/owl-education-illustration-on-a-background-premium-quality-symbols-icons-for-concept-and-graphic-design-vector.jpg" alt="Bootstrap" width="50">
             </a>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -18,7 +18,7 @@
                         <a class="nav-link active fs-5 {{request()->routeIs('apodoInicio')?'text-primary fw-bold':''}}" aria-current="page" href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active fs-5 {{request()->routeIs('apodoFormulario')?'text-primary fw-bold':''}}" href="{{ route('apodoFormulario' )}}">Formulario</a>
+                        <a class="nav-link active fs-5 {{request()->routeIs('recuerdo.create')?'text-primary fw-bold':''}}" href="{{ route('recuerdo.create' )}}">Formulario</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active fs-5 {{request()->routeIs('apodoRecuerdos')?'text-primary fw-bold':''}}" href="{{ route('apodoRecuerdos' )}}">Recuerdos</a>
