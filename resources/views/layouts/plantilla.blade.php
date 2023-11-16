@@ -21,7 +21,7 @@
                         <a class="nav-link active fs-5 {{request()->routeIs('recuerdo.create')?'text-primary fw-bold':''}}" href="{{ route('recuerdo.create' )}}">Formulario</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active fs-5 {{request()->routeIs('apodoRecuerdos')?'text-primary fw-bold':''}}" href="{{ route('apodoRecuerdos' )}}">Recuerdos</a>
+                        <a class="nav-link active fs-5 {{request()->routeIs('recuerdo.index')?'text-primary fw-bold':''}}" href="{{ route('recuerdo.index' )}}">Recuerdos</a>
                     </li>
                 </ul>
             

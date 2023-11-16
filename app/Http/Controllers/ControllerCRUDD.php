@@ -14,7 +14,8 @@ class ControllerCRUDD extends Controller
      */
     public function index()
     {
-        //
+        $consultaRecuerdos= DB::table('tb_recuerdos')->get();
+        return view('recuerdos', compact('consultaRecuerdos'));
     }
 
     /**

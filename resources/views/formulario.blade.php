@@ -1,6 +1,6 @@
 @extends('layouts.plantilla')
  
-@section('title', 'DIARIO-FORMULARIO')
+@section('title', 'Diario / Formulario')
 
 
 @section('contenido')
