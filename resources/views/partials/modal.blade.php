@@ -6,7 +6,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form class='px-5 py-3' method="POST" action="/recuerdo">
+                <form class='px-5 py-3' method="POST" action="/recuerdo/{{ $item->id }}/confirm">
                         @csrf
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Titulo</label>
