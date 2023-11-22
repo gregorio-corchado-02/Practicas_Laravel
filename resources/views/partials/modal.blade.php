@@ -1,4 +1,4 @@
-<div class="modal fade" id="editar" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal fade" id="editar{{ $item->id }}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
@@ -10,12 +10,12 @@
                         @csrf
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Titulo</label>
-                            <input type="text" name="txtTitulo" class="form-control" value="{{$item->titulo)}}" >
+                            <input type="text" name="txtTitulo" class="form-control" value="{{($item->titulo)}}" >
                             <p class="fw-bolder">{{ $errors->first('txtTitulo')}}</p>
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">Recuerdos</label>
-                            <input type="text" name="txtRecuerdos" class="form-control" value="{{old('$item->titulo')}}" >
+                            <input type="text" name="txtRecuerdos" class="form-control" value="{{($item->recuerdo)}}" >
                             <p class="fw-bolder">{{ $errors->first('txtRecuerdos')}}</p>
                         </div> 
                     </div>
