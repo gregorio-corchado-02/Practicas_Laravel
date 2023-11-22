@@ -6,6 +6,7 @@
 @section('contenido')
 
 <h1 class="display-1 text-dark text-center mt-4">Recuerdos</h1>
+@include('partials.modal')
 
 <div class='container px-5 mt-3'>
 
@@ -20,11 +21,15 @@
         <p class="card-text fs-5">{{$recuerdo->recuerdo}}</p>
         
         <div class='mb-2 d-grid mx-auto'>
-          <a href="#" class="btn btn-outline-success">Editar</a>
+          <button type='button' class='btn btn-outline-success' data-bs-target='#editar'data-bs-toggle='modal'>
+            Editar
+          </button>
         </div>
 
-        <div class='mb-2 d-grid mx-auto'>
-          <a href="#" class="btn btn-outline-success">Eliminar</a>
+        <div class='mb-2 d-grid mx-auto'type='button' class='btn btn-primary'>
+          <button type='button' class='btn btn-outline-success'>
+            Eliminar
+          </button>
         </div>
 
       </div>
