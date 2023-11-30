@@ -10,6 +10,7 @@ Route::get('/', [diarioController::class,'metodoInicio'])->name('apodoInicio');
 Route::post('/recuerdo', [ControllerCRUDD::class,'store'])->name('recuerdo.store');
 Route::get('/recuerdo', [ControllerCRUDD::class,'index'])->name('recuerdo.index');
 Route::post('/recuerdo/{id}/confirm', [ControllerCRUDD::class,'update'])->name('recuerdo.update');
+Route::post('/recuerdo/{id}/eliminar', [ControllerCRUDD::class,'destroy'])->name('recuerdo.destroy');
 
 
 

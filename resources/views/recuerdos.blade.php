@@ -25,8 +25,8 @@
           </button>
         </div>
 
-        <div class='mb-2 d-grid mx-auto'type='button' class='btn btn-primary'>
-          <button type='button' class='btn btn-outline-success'>
+        <div class='mb-2 d-grid mx-auto'>
+          <button type='button' class='btn btn-outline-success' data-bs-target='#eliminar{{ $item->id }}' data-bs-toggle='modal'>
             Eliminar
           </button>
         </div>
@@ -35,6 +35,7 @@
     </div>
 
     @include('partials.modal')
+    @include('partials.modalEliminar')
 
 @endforeach
 

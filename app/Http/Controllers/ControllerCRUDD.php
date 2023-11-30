@@ -74,8 +74,10 @@ class ControllerCRUDD extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(validadorFormDiario $req, string $id)
     {
-        //
+        DB::table('tb_recuerdos')->where('id', $id)->delete();
+
+        return redirect('recuerdo/create')->with('confirmacion', 'Recuerdo eliminado correctamente');
     }
 }
