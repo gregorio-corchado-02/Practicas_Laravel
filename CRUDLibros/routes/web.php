@@ -22,6 +22,9 @@ use App\Http\Controllers\LibroController;
 Auth::routes();
 Route::get('/', [App\Http\Controllers\HomeController::class,'index'])->name('home'); 
 Route::resource('home', LibroController::class);
+Route::put('libros/{id}', [LibroController::class, 'update'])->name('libros.update');
+Route::delete('libros/{id}', [LibroController::class, 'destroy'])->name('libros.destroy');
+Route::post('libros', [LibroController::class, 'store'])->name('libros.store');
 
 
 

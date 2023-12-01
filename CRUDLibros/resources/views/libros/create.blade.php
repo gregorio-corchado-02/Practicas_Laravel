@@ -2,7 +2,7 @@
 
   
   <!-- Modal -->
-  <div class="modal fade" id="create" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal fade" id="createLibro" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content fw-bold">
         
@@ -13,26 +13,26 @@
 
         <div class="modal-body text-primary">
 
-            <form method="POST" action="">
+            <form method="POST" action="{{ route('libros.store') }}">
                 @csrf               
                 <div class="mb-3">
                   <label  class="form-label">Titulo Libro: </label>
-                  <input type="text" class="form-control" name="">
+                  <input type="text" class="form-control" name="txttit">
                 </div>
 
                 <div class="mb-3">
                 <label class="form-label">Autor: </label>
-                <input type="text" class="form-control" name="">
+                <input type="text" class="form-control" name="txtaut">
                 </div>
 
                 <div class="mb-3"> 
                 <label class="form-label">Paginas: </label>
-                <input type="number" class="form-control" name="">
+                <input type="number" class="form-control" name="txtpag">
                 </div>
 
                 <div class="mb-3"> 
                   <label class="form-label">Año de Publicacion: </label>
-                  <input type="number" class="form-control" name="">
+                  <input type="number" class="form-control" name="txtan">
                   </div>
    
         </div>

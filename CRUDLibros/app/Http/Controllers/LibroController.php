@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Libro;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use DB;
 
 class LibroController extends Controller
 {
@@ -30,9 +31,14 @@ class LibroController extends Controller
      */
     public function store(Request $request)
     {
-        $addLibro = new libro();
-        $addLibro->nombre - $request->txttit;
-        $addLibro->nombre - $request->txttit;
+        $addlibro= new libro();
+        $addlibro-> titulo = $request->txttit;
+        $addlibro-> autor = $request->txtaut;
+        $addlibro-> paginas = $request->txtpag;
+        $addlibro-> anio = $request->txtan;
+        $addlibro-> save();
+
+        return redirect()-> back ();
 
 
     }
@@ -48,24 +54,39 @@ class LibroController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Libro $libro)
+    public function edit(Request $request, string $id)
     {
-        BD::table('libros')->delete
+        $libro = Libro::find($id);
+        $libro->nombre=$request->txtnombre;
+        $libro->save();
+        
+
+        return redirect()->route('libros.index');
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Libro $libro)
+    public function update(Request $request, $id)
     {
-        //
+        $uptlibro= libro::find($id);
+        $uptlibro-> titulo = $request->txttitulo;
+        $uptlibro-> autor = $request->txtautor;
+        $uptlibro-> paginas = $request->txtpaginas;
+        $uptlibro-> anio = $request->txtanio;
+        $uptlibro->update();
+
+        return redirect ()->back();
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Libro $libro)
+    public function destroy($id)
     {
-        //
+        $deslibro= libro::find($id);
+        $deslibro->delete();
+        return redirect()->back();
+        
     }
 }

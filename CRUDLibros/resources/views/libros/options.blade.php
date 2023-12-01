@@ -14,29 +14,29 @@
 
         <div class="modal-body text-primary">
 
-            <form method="POST" action="">
+            <form method="POST" action="{{ route('libros.update', ['id' => $item->id]) }}">
                 
                 @csrf 
-                @method('') 
+                @method('PUT') 
                 
                 <div class="mb-3">
                   <label  class="form-label">Titulo Libro: </label>
-                  <input type="text" class="form-control" name="" value="{{$item->titulo}}">
+                  <input type="text" class="form-control" name="txttitulo" value="{{$item->titulo}}">
                 </div>
 
                 <div class="mb-3">
                 <label class="form-label">Autor: </label>
-                <input type="text" class="form-control" name="" value="{{$item->autor}}">
+                <input type="text" class="form-control" name="txtautor" value="{{$item->autor}}">
                 </div>
 
                 <div class="mb-3"> 
                 <label class="form-label">Paginas: </label>
-                <input type="number" class="form-control" name="" value="{{$item->paginas}}">
+                <input type="number" class="form-control" name="txtpaginas" value="{{$item->paginas}}">
                 </div>
 
                 <div class="mb-3"> 
                   <label class="form-label">Año de Publicacion: </label>
-                  <input type="number" class="form-control" name="" value="{{$item->anio}}">
+                  <input type="number" class="form-control" name="txtanio" value="{{$item->anio}}">
                   </div>
    
         </div>
@@ -58,7 +58,7 @@
   
   <!-- Modal Para Eliminar  -->
 
-  <div class="modal fade" id=""  data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal fade" id="eliminar{{$item->id}}"  data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         
@@ -69,9 +69,9 @@
 
         <div class="modal-body">
 
-            <form method="POST" action="">
+            <form method="POST" action="{{ route('libros.destroy', ['id' => $item->id]) }}">
                 @csrf 
-                @method('')   
+                @method('DELETE')   
                 <div class="text-danger fs-4 fw-semibold">
                   ¿Seguro que borraras al Libro   ?
                 </div>           

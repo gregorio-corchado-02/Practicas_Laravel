@@ -18,7 +18,7 @@
 
         <table class="table ">
 
-            <button type="button" class="btn btn-success m-5" data-bs-toggle="modal" data-bs-target="#">
+            <button type="button" class="btn btn-success m-5" data-bs-toggle="modal" data-bs-target="#createLibro">
                 <i class="bi bi-floppy"></i>  Nuevo Libro
             </button>
 
@@ -50,10 +50,10 @@
                                     <i class="bi bi-list-stars"></i> Opciones
                                 </button>
                                 <ul class="dropdown-menu">
-                                    <button type="button" class="btn btn-warning m-1" data-bs-toggle="modal" data-bs-target="#">
+                                    <button type="button" class="btn btn-warning m-1" data-bs-toggle="modal" data-bs-target="#editar{{$item->id}}">
                                         <i class="bi bi-pencil-square"></i> - Editar 
                                       </button>
-                                    <button type="button" class="btn btn-danger m-1" data-bs-toggle="modal" data-bs-target="#">
+                                    <button type="button" class="btn btn-danger m-1" data-bs-toggle="modal" data-bs-target="#eliminar{{$item->id}}">
                                         <i class="bi bi-trash"></i> - Borrar 
                                       </button>
                                 </ul>
@@ -63,6 +63,7 @@
                         
                     </tr>
                     @include('libros.options')
+                    @include('libros.create')
                     @endforeach
 
                     
